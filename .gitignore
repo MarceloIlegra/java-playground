@@ -1,0 +1,14 @@
+/java-csv/target/
+
+# Mac Users
+.DS_Store
+
+# Java
+/java-csv/node_modules
+/java-csv/nbproject
+.settings
+.classpath
+.project
+*.log
+*.db
+*.xcuserstate
