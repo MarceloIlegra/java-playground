@@ -11,6 +11,7 @@ import org.apache.commons.csv.CSVPrinter;
 public class ModelWriterCSV {
 
     private final String NEW_LINE_SEPARATOR = "\n";
+    private final String EXTENSION_CSV = "csv";
     private final String COLUMN_SEPARATOR = "sep=,";
     private final Object[] FILE_HEADER = {"email", "partner"};
     private final CSVFormat csvFileFormat = CSVFormat.DEFAULT.withRecordSeparator(NEW_LINE_SEPARATOR);
@@ -21,7 +22,7 @@ public class ModelWriterCSV {
     }
 
     public void generateFile(List<Model> models){
-        try(FileWriter fileWriter = new FileWriter(filename+".csv"); CSVPrinter csvFilePrinter = new CSVPrinter(fileWriter, csvFileFormat)) {
+        try(FileWriter fileWriter = new FileWriter(String.format("%s.%s", filename,EXTENSION_CSV)); CSVPrinter csvFilePrinter = new CSVPrinter(fileWriter, csvFileFormat)) {
             csvFilePrinter.printRecord(COLUMN_SEPARATOR);
             csvFilePrinter.printRecord(FILE_HEADER);
             models.stream().forEach( m -> {
