@@ -12,3 +12,6 @@
 *.log
 *.db
 *.xcuserstate
+
+.idea
+*.iml
