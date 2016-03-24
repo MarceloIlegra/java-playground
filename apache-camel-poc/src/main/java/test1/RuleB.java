@@ -1,3 +1,4 @@
+package test1;
 
 public class RuleB implements IRule{
     @Override

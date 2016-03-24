@@ -1,3 +1,4 @@
+package test1;
 
 public class RuleA implements IRule{
 

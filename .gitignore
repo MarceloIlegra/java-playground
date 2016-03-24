@@ -15,3 +15,7 @@
 
 .idea
 *.iml
+*/build
+*/.gradle/
+*/gradle
+*.bat
