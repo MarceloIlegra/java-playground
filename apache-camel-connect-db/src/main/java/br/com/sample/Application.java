@@ -28,7 +28,7 @@ public class Application {
         while(resultSet.next()){
             System.out.println(resultSet.getString("DESCRIPTION"));
         }
-        
+
         SimpleRegistry reg = new SimpleRegistry() ;
         reg.put("myDataSource",basicDataSource);
 
